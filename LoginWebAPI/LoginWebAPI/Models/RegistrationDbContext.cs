@@ -7,7 +7,7 @@ namespace LoginWebAPI.Models
         public RegistrationDbContext(DbContextOptions<RegistrationDbContext> options) : base(options)
         {
         }
-        DbSet<Registration> registrations { get; set; }
+        public DbSet<Registration> registrations { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

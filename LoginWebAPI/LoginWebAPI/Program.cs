@@ -1,5 +1,6 @@
 
 using LoginWebAPI.Models;
+using LoginWebAPI.Services;
 using Microsoft.EntityFrameworkCore;
 
 namespace LoginWebAPI
@@ -17,7 +18,6 @@ namespace LoginWebAPI
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddDbContext<RegistrationDbContext>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("DBDefault")));
-
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
